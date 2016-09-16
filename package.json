@@ -1,0 +1,44 @@
+{
+  "name": "simple-authorizenet",
+  "version": "1.0.0",
+  "description": "A lightweight and simplified 'authorizenet' with Promise support.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && mkdirp dist && babel src --out-dir dist --source-maps inline",
+    "build:prod": "npm run clean && mkdirp dist && babel src --out-dir dist",
+    "clean": "rimraf dist",
+    "prepublish": "npm run build:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvinbrewer/simple-authorizenet.git"
+  },
+  "keywords": [
+    "authorizenet",
+    "promise"
+  ],
+  "author": "CJ Brewer <brewercalvinj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calvinbrewer/simple-authorizenet/issues"
+  },
+  "homepage": "https://github.com/calvinbrewer/simple-authorizenet#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.2.2",
+    "mkdirp": "^0.5.1",
+    "nyc": "^8.3.0",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "request-promise": "^4.1.1"
+  }
+}
