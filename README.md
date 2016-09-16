@@ -1,6 +1,11 @@
 # simple-authorizenet
 A lightweight and simplified 'authorizenet' with Promise support.
 
+## Install
+```
+npm i --save simple-authorizenet
+```
+
 ## Setup
 Simple authorize.net credit card charge with Promise support.
 
