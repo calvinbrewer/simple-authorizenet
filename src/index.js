@@ -40,7 +40,7 @@ import rp from 'request-promise';
  * @param  {String} lastName - Last name of the purchaser.
  * @return {Function} request-promise
  */
-export default ({ number, exp, code, amount, email, firstName, lastName }) => {
+export default ({ number, exp, code, amount, email, firstName, lastName, description }) => {
   // Reference: https://developer.authorize.net/api/reference/index.html#payment-transactions
   const createRequest = {
     createTransactionRequest: {
@@ -65,6 +65,9 @@ export default ({ number, exp, code, amount, email, firstName, lastName }) => {
         billTo: {
           firstName,
           lastName,
+        },
+        order: {
+          description,
         },
       },
     },
